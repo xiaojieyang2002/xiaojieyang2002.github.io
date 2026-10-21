@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="杨晓杰的个人主页：教育、项目、实习、研究、校园经历与荣誉。">
+  <title>杨晓杰 Xiaojie Yang</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <main class="page" id="top">
+    <header class="profile">
+      <div class="profile-intro">
+        <h1>杨晓杰 <span>Xiaojie Yang</span></h1>
+        <p class="profile-line"><svg class="profile-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11v5c0 2 3 4 6 4s6-2 6-4v-5M22 9v7"/></svg><span>深圳大学 · 计算机科学与技术硕士（在读）（2027.06毕业）</span></p>
+        <div class="profile-tags" aria-label="个人信息"><span>中共党员</span><span>CET-6</span></div>
+      </div>
+      <div class="profile-focus" aria-label="研究与实践方向">
+          <p class="focus-heading">Technical Focus</p>
+          <ul class="focus-list">
+            <li><strong>软件开发</strong><span>Java、Spring Boot、MyBatis、MySQL；Vue；Docker、Linux</span></li>
+            <li><strong>AI 应用</strong><span>智能文档解析；RAG；Agent（LangChain、LangGraph、MCP）</span></li>
+            <li><strong>大模型原理与推理部署</strong><span>Transformer、LLM/VLM；vLLM、KV Cache、Tensor Parallel</span></li>
+            <li><strong>多传感器与时序预测</strong><span>PPG/ACC 信号处理、滤波、FFT、CNN/RNN 时序建模</span></li>
+            <li><strong>算法研究</strong><span>自动化算法设计、复杂网络优化、MoE、DQN、进化强化学习、多任务优化</span></li>
+          </ul>
+      </div>
+      <div class="profile-links">
+          <div class="contact-links">
+            <a href="https://www.cnblogs.com/yang-xiaojie" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span>博客园</span></a>
+            <a href="mailto:2868551006@qq.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>2868551006@qq.com</span></a>
+          </div>
+          <nav class="profile-nav" aria-label="页面导航"><a href="#education">Education</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#research">Research</a><a href="#honors">Honors &amp; Leadership</a></nav>
+      </div>
+      <img class="profile-photo" src="./assets/profile-photo.jpg" alt="杨晓杰的生活照" width="245" height="327">
+    </header>
+
+    <section id="education" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <div class="entry education-entry"><div class="entry-side"><img class="school-logo" src="./assets/shenzhen-university.png" alt="深圳大学校徽" width="248" height="85"></div><div class="entry-body"><div class="entry-heading"><h3>深圳大学</h3><time>2024.09 — 2027.06</time></div><p>计算机与软件学院 · 计算机科学与技术 · 学术型硕士</p><p class="muted">GPA 3.62/4.0</p></div></div>
+      <div class="entry education-entry"><div class="entry-side"><img class="school-logo" src="./assets/harbin-university-of-commerce.png" alt="哈尔滨商业大学校徽" width="642" height="164"></div><div class="entry-body"><div class="entry-heading"><h3>哈尔滨商业大学</h3><time>2020.09 — 2024.07</time></div><p>计算机与信息工程学院 · 计算机科学与技术 · 本科</p><p class="muted">专业排名 3/170</p></div></div>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <div class="entry project-entry visual-entry plan-entry">
+        <div class="entry-side plan-gallery">
+          <img class="entry-image" src="./assets/plan-assistant-batch.jpg" alt="在微信中批量添加计划的对话截图" width="1200" height="2670" loading="lazy">
+          <img class="entry-image" src="./assets/plan-assistant-demo.jpg" alt="在微信中查询计划并设置提醒的对话截图" width="1200" height="2670" loading="lazy">
+        </div>
+        <div class="entry-body">
+          <div class="project-heading"><h3><a href="http://xjy2002-atszu.nat100.top/guide.html" target="_blank" rel="noopener noreferrer">AI 个人计划助手</a></h3><a class="project-demo" href="http://xjy2002-atszu.nat100.top/guide.html" target="_blank" rel="noopener noreferrer">扫码体验 ↗</a></div>
+          <p>用户直接在微信中通过语义交互管理个人计划，无需下载额外 App 或学习复杂操作。</p>
+          <ul class="project-details">
+            <li><strong>架构设计：</strong>以用户会话和消息批次双状态机驱动处理流程：① Java 接收并持久化微信回调；② 批次处理器异步消费消息、调用 Agent 并发送回复；③ Agent 解析语义、编排 Java 工具完成计划操作；④ 提醒任务扫描并发送到期提醒；⑤ 语音任务异步转写并回填原批次。</li>
+            <li><strong>可靠性设计：</strong>通过消息去重、批次租约处理重复回调与 Worker 中断；缓存首次语义分析并记录写操作结果，使重试沿用原动作顺序、避免重复写库；持久化追问进度，对多候选修改进行目标澄清和版本校验；回复落库后发送并跟踪发送状态；关键数据与高风险操作由 Java 校验，不依赖 Agent 自行判断是否放行。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="entry project-entry visual-entry volunteer-entry">
+        <div class="entry-side"><img class="entry-image volunteer-image" src="./assets/volunteer-platform.png" alt="志愿服务平台网页截图" width="1242" height="905" loading="lazy"></div>
+        <div class="entry-body">
+          <div class="project-heading"><h3><a href="http://39.96.51.13/" target="_blank" rel="noopener noreferrer">志愿服务平台</a></h3><a class="project-demo" href="http://39.96.51.13/" target="_blank" rel="noopener noreferrer">在线试玩 ↗</a></div>
+          <p>前后端分离的志愿服务平台，面向游客、志愿者和管理员，支持注册登录、活动浏览与报名、活动发布、等级权限控制、个人活动管理、活动审核、用户管理及官方活动管理。</p>
+          <ul class="project-details">
+            <li><strong>前端：</strong>基于 Vue 3，使用 Vue Router 实现嵌套路由，Pinia 管理登录态，Axios 完成前后端交互，Element Plus 实现页面功能。</li>
+            <li><strong>后端与鉴权：</strong>基于 Spring 开发接口，PageHelper 实现分页；通过 JWT 和拦截器完成身份认证，并使用 ThreadLocal 维护当前用户身份信息。</li>
+            <li><strong>数据库设计：</strong>基于 MySQL 设计用户、活动、报名关系及官方活动等核心数据表；通过中间表建模用户与活动的多对多关系，使用 Trigger 自动维护用户等级、活动参与人数及初始状态，使用 Event Scheduler 根据活动日期定时更新活动状态。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="entry project-entry">
+        <div class="entry-body">
+          <h3>金融问答 Agent</h3>
+          <p>面向金融合规、反洗钱及监管处罚问答场景，构建融合可控工作流、LangChain Agent 与 RAG 的金融知识问答系统。</p>
+          <ul class="project-details">
+            <li><strong>Agent 架构：</strong>基于 LangGraph 编排“上下文准备 → Research Agent → 证据校验 → 合规闸门 → 回答或拒答”工作流；Research Agent 使用 LangChain 完成意图识别、澄清判断，并选择、循环调用中国金融法规库和反洗钱知识库等检索工具，将结构化证据交由后续节点校验。</li>
+            <li><strong>RAG 知识库创建与检索：</strong>使用 MinerU 将金融法规 PDF 转录为文本，按法规条款结构进行语义切分，提取生效日期等元数据，构建“Query 改写 → 多路召回”流程；通过低相关度拒答、禁用 HyDE 和法规依据校验，约束回答基于高相关条款生成。</li>
+            <li><strong>记忆与可靠性：</strong>实现短期和长期记忆、工具异常重试与降级、ReAct 循环防护；开发 MCP 消息工具，打通 Agent 回答与微信公众号消息触达链路。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="entry project-entry"><div class="entry-body"><h3>电商拼单支付平台</h3><p>正在完善中。</p></div></div>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+      <div class="entry experience-entry"><div class="entry-side"><span class="company-frame"><img class="company-image bea-image" src="./assets/bea-building.jpg" alt="东亚银行办公大楼" width="1279" height="1706" loading="lazy"></span></div><div class="entry-body"><div class="entry-heading"><h3>东亚银行（中国）有限公司</h3><time datetime="2026-05">2026.05 — 2026.08</time></div><p class="subtitle">战略及数字化办公室 · AI 应用工程师</p><p>开发从批量合同 PDF 解析、业务计算到邮件发送的自动化工具，并使用 MinerU 等构建金融法规 RAG 知识库。</p><p class="experience-tech"><strong>相关技术：</strong>原生 PDF 解析、OCR、多模块 Pipeline、文档 VLM（MinerU-Diffusion、Unlimited OCR）、RAG；Transformer、ViT/NaViT；vLLM 推理部署（KV Cache、Tensor Parallel、PagedAttention、Continuous Batching）与性能测试（vLLM Metrics、vllm bench serve）。</p></div></div>
+      <div class="entry experience-entry"><div class="entry-side"><span class="company-frame"><img class="company-image anker-image" src="./assets/anker-building.jpg" alt="安克创新办公大楼" width="896" height="1344" loading="lazy"></span></div><div class="entry-body"><div class="entry-heading"><h3>安克创新科技股份有限公司</h3><time datetime="2026-02">2026.02 — 2026.04</time></div><p class="subtitle">2023 实验室 · 深度学习算法工程师</p><p>基于 PPG、ACC 与金标心率开发运动心率预测模型（MAE 1.44 bpm），并通过自适应 PPG 通道选择将设备功耗降低 26%–46%。</p><p class="experience-tech"><strong>相关技术：</strong>嵌入式数据解析、时间对齐、信号质量评估、滤波与 FFT 时频分析；CNN/RNN 多传感器融合建模；共享特征编码器、PPG 通道自适应选择。</p></div></div>
+    </section>
+
+    <section id="research" aria-labelledby="research-heading">
+      <h2 id="research-heading">Research</h2>
+      <div class="research-entry"><h3>Multitask Node Combinatorial Optimization in Complex Networks via Mixture-of-Experts</h3><p><span>作者</span> Xiaojie Yang, Zhijie Cao, Yeming Yang, Lingjie Li, Lijia Ma</p><p><span>状态</span> Accepted · IEEE CEC 2026</p></div>
+      <div class="research-entry"><h3>EvoRAG: Evolutionary Retrieval-Augmented Heuristic Generation for Node Combinatorial Optimization in Complex Networks</h3><p><span>作者</span> Xiaojie Yang et al.</p><p><span>状态</span> Manuscript</p></div>
+    </section>
+
+    <section id="honors" aria-labelledby="honors-heading">
+      <h2 id="honors-heading">Honors &amp; Leadership</h2>
+      <div class="honor-grid">
+        <div class="entry visual-entry honor-entry"><div class="entry-side"><img class="entry-image honor-image" src="./assets/national-scholarship.jpg" alt="杨晓杰的国家奖学金荣誉证书" width="1856" height="1279" loading="lazy"></div><div class="entry-body"><h3>国家奖学金</h3><p>2021—2022 学年本科生国家奖学金</p></div></div>
+        <div class="entry visual-entry honor-entry"><div class="entry-side"><img class="entry-image honor-image" src="./assets/graduate-recommendation.jpg" alt="深圳大学推荐免试硕士研究生录取通知截图" width="1254" height="846" loading="lazy"></div><div class="entry-body"><h3>推荐免试</h3><p>2023 年获取推荐免试资格，2024 年入学</p></div></div>
+        <div class="entry visual-entry honor-entry"><div class="entry-side"><img class="entry-image honor-image" src="./assets/mcm-honorable-mention.jpg" alt="2023 年美国大学生数学建模竞赛 H 奖证书" width="720" height="556" loading="lazy"></div><div class="entry-body"><h3>美国大学生数学建模竞赛（ICM）H 奖</h3><p>2023 · Honorable Mention</p></div></div>
+        <div class="entry visual-entry honor-entry"><div class="entry-side"><img class="entry-image honor-image" src="./assets/national-inspirational-scholarship-redacted.jpg" alt="已隐去证件号码的国家励志奖学金证明" width="2148" height="1988" loading="lazy"></div><div class="entry-body"><h3>国家励志奖学金</h3><p>2020—2021 学年<br>2022—2023 学年</p></div></div>
+        <div class="entry visual-entry honor-entry"><div class="entry-side"><img class="entry-image honor-image" src="./assets/hope-scholarship-redacted.jpg" alt="已隐去学号及其他学生信息的希望工程哈尔滨银行奖学金公示名单节选" width="2630" height="1120" loading="lazy"></div><div class="entry-body"><h3>希望工程·哈尔滨银行奖学金</h3><p>2022 年获奖公示名单节选</p></div></div>
+        <div class="honor-extra"><h3>深圳大学特等奖学金</h3><h3>哈尔滨商业大学特等奖学金</h3></div>
+      </div>
+      <div class="leadership-list">
+        <div class="leadership-row"><span><strong>深圳大学</strong> · 团支书</span><time>2024.09 — 至今</time></div>
+        <div class="leadership-row"><span><strong>深圳大学</strong> · 计算机与软件学院研究生第二党支部宣传委员</span><time>2024.12 — 2025.12</time></div>
+        <div class="leadership-row"><span><strong>哈尔滨商业大学</strong> · 班长</span><time>2020.09 — 2024.07</time></div>
+        <div class="leadership-row"><span><strong>哈尔滨商业大学</strong> · 计算机与信息工程学院外联部部长</span><time>2022.10 — 2023.10</time></div>
+        <div class="leadership-row"><span><strong>哈尔滨商业大学</strong> · 2022 级新生辅导员</span><time>2022.09 — 2022.12</time></div>
+      </div>
+    </section>
+    <footer><span>杨晓杰 · Xiaojie Yang</span><a href="#top">返回顶部 ↑</a></footer>
+  </main>
+</body>
+</html>
